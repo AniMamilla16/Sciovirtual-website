@@ -17,12 +17,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-
 .container {
     max-width: 900px;
     margin: 0 auto;
 }
-
 
 h1 {
     font-family: "Anton", sans-serif;
@@ -30,13 +28,10 @@ h1 {
     text-align: center;
     letter-spacing: 8px;
     margin: 0 0 20px 0;
-
     text-shadow:
         0 4px 10px rgba(0,0,0,0.5),
         0 0 25px rgba(50,255,50,0.35);
 }
-
-
 
 .logo-link {
     display: block;
@@ -48,139 +43,142 @@ h1 {
     margin-bottom: 40px;
 }
 
-
 .logo-link:hover {
     color: #66ddff;
     text-decoration: underline;
 }
 
+/* Expandable Fact Boxes */
 
-
-p {
-    font-size: 20px;
-    line-height: 1.8;
-
+.fact-box {
     background: rgba(255,255,255,0.08);
-
-    padding: 15px 20px;
-
     border-left: 5px solid lime;
     border-radius: 10px;
-
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
     margin: 20px 0;
-}
-
-
-
-p:hover {
-    background: rgba(255,255,255,0.15);
+    padding: 15px 20px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
+.fact-box:hover {
+    background: rgba(255,255,255,0.15);
+}
 
+.fact-box summary {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+}
 
-/* Keeps all images on the same row */
+.fact-box summary::-webkit-details-marker {
+    display: none;
+}
+
+.fact-box summary::after {
+    content: " ▼";
+    color: lime;
+    font-size: 18px;
+}
+
+.fact-box[open] summary::after {
+    content: " ▲";
+}
+
+.fact-box p {
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Images */
+
 .image-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 20px;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
 
-
-
-/* First image - biggest */
 .main-car {
     width: 400px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
-
-
-/* Second image - medium */
 .logo-image {
     width: 180px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
-
-
-/* Third image - smallest */
 .huayra-image {
     width: 120px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
-
 </style>
-
 </head>
-
 
 <body>
 
 <div class="container">
 
-<h1>Nitro</h1>
-
+<h1>Nitro Cars</h1>
 
 <a class="logo-link" href="https://www.carlogos.org/car-brands/#google_vignette" target="_blank">
     Explore Car Logos
 </a>
 
+<details class="fact-box">
+    <summary>Nitro is a car brand that makes fast and prestige cars.</summary>
+    <p> Fun Fact: Nitro cars are built with lightweight materials for better speed.</p>
+    <p>⚡ Fun Fact: Some Nitro concept cars can reach 60 mph in under 3 seconds.</p>
+</details>
 
+<details class="fact-box">
+    <summary>The cars have unique designs and are designed to be automated to get to your destination.</summary>
+    <p>Fun Fact: AI can help detect traffic and road hazards.</p>
+    <p>Fun Fact: Self-driving systems use cameras, radar, and LiDAR together.</p>
+</details>
 
-<p>
-Nitro is a car brand that makes fast and prestige cars.
-</p>
+<details class="fact-box">
+    <summary>Nitro cars are made to be safe by LiDAR detection.</summary>
+    <p> Fun Fact: LiDAR creates a detailed 3D map around the vehicle.</p>
+    <p> Fun Fact: It can detect pedestrians even in low-light conditions.</p>
+</details>
 
+<details class="fact-box">
+    <summary>Some Nitro cars use new technology to sustain fuel for a long-term drive.</summary>
+    <p> Fun Fact: Efficient engines help reduce fuel consumption.</p>
+    <p> Fun Fact: Future models may include hybrid and electric powertrains.</p>
+</details>
 
-<p>
-The cars have unique designs and are designed to be automated to get to your destination.
-</p>
-
-
-<p>
-Nitro cars are made to be safe by LiDAR detection.
-</p>
-
-
-<p>
-Some Nitro cars use new technology to sustain fuel for a long-term drive.
-</p>
-
-
-<p>
-Many people will and should like Nitro because the cars are elegant and reliable.
-</p>
-
-
+<details class="fact-box">
+    <summary>Many people will and should like Nitro because the cars are elegant and reliable.</summary>
+    <p> Fun Fact: Reliability means fewer breakdowns over time.</p>
+    <p> Fun Fact: Nitro offers custom colors and wheel options.</p>
+</details>
 
 <div class="image-container">
-
 
 <img class="main-car"
 src="https://www.supercars.net/blog/wp-content/uploads/2018/01/Aston-Vulcan.jpg"
 alt="Nitro Car">
 
-
 <img class="logo-image"
 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYuqsTCyEeRug4XlZqY8wy6qNLdFiNW-LTd55eif4_DQ&s=10"
 alt="Second Nitro Image">
-
 
 <img class="huayra-image"
 src="https://www.beirutnightlife.com/wp-content/uploads/2012/04/huayra-doors-open.jpeg"
 alt="Huayra Doors">
 
 </div>
-
 
 </div>
 
